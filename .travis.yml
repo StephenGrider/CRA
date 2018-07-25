@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t stephengrider/react .
+  - docker build -t stephengrider/react-test -f Dockerfile.dev .
 
 script:
-  - docker run stephengrider/react npm test -- --coverage
+  - docker run stephengrider/react-test npm test -- --coverage
